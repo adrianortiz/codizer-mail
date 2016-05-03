@@ -1,27 +1,31 @@
 $white: #FFFFFF;
+$gray-100: #FBFBFB;
+$gray-150: #EBF0F3;
+$gray-300: #7C7C7C;
+$purple-100: #A761C2;
 
 // MIXINS
 
 @mixin prefixer($property, $value, $prefixes: webkit moz ms o) {
-  #{$property}: #{$value};
-  @each $prefix in $prefixes {
-    #{'-' + $prefix + '-' + $property}: #{$value};
-  }
+    #{$property}: #{$value};
+    @each $prefix in $prefixes {
+        #{'-' + $prefix + '-' + $property}: #{$value};
+    }
 }
 
 @mixin transition($value: .3s ease) {
-  @include prefixer(transition, $value);
+    @include prefixer(transition, $value);
 }
 
 @mixin box-sizing($value: border-box) {
-  @include prefixer(box-sizing, $value);
+    @include prefixer(box-sizing, $value);
 }
 
 @mixin centrarXY(){
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  @include prefixer(transform, translate(-50%, -50%));
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    @include prefixer(transform, translate(-50%, -50%));
 }
 /*
     @include box-sizing(border-box);

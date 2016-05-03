@@ -1,3 +1,4 @@
-h1 {
-    @include centrarXY();
+*, *:focus {
+  outline:0 !important;
+  @include box-sizing(border-box);
 }
