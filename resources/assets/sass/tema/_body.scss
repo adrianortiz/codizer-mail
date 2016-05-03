@@ -1,0 +1,14 @@
+html,body {
+  margin: 0;
+  height: 100%;
+  background-color: $white;
+  font-family: 'Open Sans', sans-serif !important;
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
+
+}
+
+*, *:focus {
+  outline:0 !important;
+  @include box-sizing(border-box);
+}
