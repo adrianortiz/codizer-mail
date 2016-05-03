@@ -34,8 +34,7 @@ div#container-main, div#container-mail-list, div#container-preview {
     Container main
 */
 div#container-main {
-    width: 160px;
-    background-color: red;
+    width: 180px;
 }
 
 /*
@@ -50,68 +49,6 @@ div#container-mail-list {
     Contianer preview
 */
 div#container-preview {
-    @include prefixer(width, calc(100% - 420px));
+    @include prefixer(width, calc(100% - 440px));
     background-color: $white;
-}
-
-
-div#container-user {
-    button {
-        padding: 0;
-        margin: 0;
-        width: 160px;
-        height: 56px;
-
-        background-color: $white;
-        border: solid 0;
-
-        &:hover, &:focus {
-            color: $purple-100;
-        }
-
-        span, img, ul{
-            float: left;
-        }
-
-        span#blue-line {
-            width: 4px;
-            height: 39px;
-            margin-top: 3px;
-            background-color: $purple-100;
-        }
-
-        span#drupdown-icon {
-            margin-top: 18px;
-            margin-right: 8px;
-        }
-
-        img {
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
-            margin: 4px 6px;
-        }
-
-        ul {
-            margin: 0;
-            margin-top: 8px;
-            padding: 0;
-            overflow: hidden;
-
-            li {
-                list-style: none;
-                margin: 0;
-                font-size: 12px;
-                text-align: left;
-                width: 90px;
-                height: 13px;
-                overflow: hidden;
-
-                &:nth-child(2) {
-                    font-size: 10px;
-                    color: $gray-300;
-                }
-            }
-        }
-    }
 }

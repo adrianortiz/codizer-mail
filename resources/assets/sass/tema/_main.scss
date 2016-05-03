@@ -1,0 +1,229 @@
+div#container-user {
+    button {
+        box-shadow: $purple-shadow;
+        padding: 0;
+        margin: 0;
+        width: 180px;
+        height: 56px;
+
+        background-color: $white;
+        border: solid 0;
+        border-bottom: solid 1px $blue-border;
+        @include transition(.3s ease);
+
+        &:hover, &:focus {
+            color: $purple-100;
+        }
+
+        span, img, ul {
+            float: left;
+        }
+
+        span#drupdown-icon {
+            margin-top: 18px;
+            margin-right: 8px;
+        }
+
+        img {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            margin: 4px 8px;
+        }
+
+        ul {
+            margin: 0;
+            margin-top: 8px;
+            padding: 0;
+            overflow: hidden;
+
+            li {
+                list-style: none;
+                margin: 0;
+                font-size: 12px;
+                text-align: left;
+                width: 90px;
+                height: 15px;
+                overflow: hidden;
+
+                &:nth-child(2) {
+                    font-size: 10px;
+                    color: $gray-300;
+                }
+            }
+        }
+    }
+}
+
+//
+span.default-line {
+    float: left;
+    width: 4px;
+    height: 39px;
+    margin-top: 2px;
+    background-color: $gray-300;
+}
+
+span.purple-line {
+    background-color: $purple-100;
+}
+
+span.blue-line {
+    background-color: $blue-300;
+}
+
+//
+button#btn-new-mail {
+    padding: 0;
+    margin: 0;
+    width: 180px;
+    height: 36px;
+    background-color: $white;
+    border: solid 0;
+    color: $blue-300;
+    font-weight: bolder;
+    box-shadow: $blue-shadow;
+    @include transition(.3s ease);
+
+    position: relative;
+    z-index: 1;
+    top: 0;
+    border-top: solid 1px $blue-border;
+    border-bottom: solid 1px $blue-border;
+
+    &:hover, &:focus {
+        color: $blue-300;
+    }
+
+    span.blue-line {
+        height: 24px;
+    }
+
+    span#txt-btn-new-mail {
+        margin-top: 3px;
+        display: inline-block;
+    }
+}
+
+
+//
+div#menu-mail-list {
+    width: 100%;
+    @include prefixer(height, calc(100% - 270px - 20%));
+    background-color: $gray-100;
+    overflow: auto;
+    padding: 22px 0;
+
+    button.menu-item-bolder {
+        font-weight: bolder;
+    }
+
+    button {
+        text-align: left;
+        margin-bottom: 2px;
+        padding: 0 16px;
+        width: 100%;
+        height: 32px;
+        font-size: 12px;
+
+        border: none;
+        background-color: $gray-100;
+
+        &:hover {
+            color: $blue-300;
+        }
+
+        span {
+            float: left;
+            &:last-child {
+                float: right !important;
+                color: $blue-300;
+            }
+        }
+
+        div {
+            margin-top: 4px;
+            margin-right: 8px;
+            width: 10px;
+            height: 10px;
+            background-color: $gray-100;
+            border: solid 2px $gray-300;
+            border-radius: 10px;
+            float: left;
+        }
+    }
+}
+
+//
+div#menu-contacts-list {
+    width: 100%;
+    @include prefixer(height, calc(140px + 20%));
+    background-color: $white;
+    border-top: solid 1px $gray-150;
+    overflow: auto;
+    padding-top: 10px;
+    padding-bottom: 20px;
+
+    button {
+        padding: 0;
+        margin: 0;
+        width: 160px;
+        height: 46px;
+        background-color: $white;
+        border: solid 0;
+        @include transition(.3s ease);
+
+        &:hover, &:focus {
+            color: $blue-300;
+        }
+
+        img, ul {
+            float: left;
+        }
+
+        img {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            margin: 4px 10px;
+        }
+
+        ul {
+            margin: 0;
+            margin-top: 8px;
+            padding: 0;
+            overflow: hidden;
+
+            li {
+                list-style: none;
+                margin: 0;
+                font-size: 12px;
+                text-align: left;
+                width: 94px;
+                height: 16px;
+                overflow: hidden;
+
+                &:nth-child(2) {
+                    font-size: 10px;
+                    color: $gray-300;
+                }
+            }
+        }
+    }
+}
+
+//
+button#btn-contacts {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 34px;
+    background-color: $white;
+    border: solid 0;
+    font-size: 11px;
+    @include transition(.3s ease);
+    border-top: solid 1px $gray-150;
+    &:hover, &:focus {
+        color: $blue-300;
+    }
+}
