@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <title>Codizer Mail</title>
     <link type="text/css" rel="stylesheet" href="./public/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./public/css/bootstrap-select.min.css" />
     <link type="text/css" rel="stylesheet" href="./public/css/app.css" />
-
 </head>
 
 <body>
@@ -40,9 +40,9 @@
             </ul>
         </div>
 
-        <button id="btn-new-mail" type="button">
+        <button id="btn-new-mail" type="button" data-toggle="modal" data-target="#new-mail-modal">
             <span class="default-line blue-line"></span>
-            <span id="txt-btn-new-mail">+Redactar</span>
+            <span id="txt-btn-new-mail">+ Redactar</span>
         </button>
 
         <div id="menu-mail-list">
@@ -57,53 +57,148 @@
             <button><span>Círculos</span><span></span></button>
 
             <button>
-                <div></div><span>Amigos</span><span></span></button>
+                <div class="icon-dot"></div><span>Amigos</span><span></span></button>
             <button>
-                <div></div><span>Familia</span><span></span></button>
+                <div class="icon-dot"></div><span>Familia</span><span></span></button>
             <button>
-                <div></div><span>Moda</span><span></span></button>
+                <div class="icon-dot"></div><span>Moda</span><span></span></button>
             <button>
-                <div></div><span>Arte y diseño</span><span></span></button>
+                <div class="icon-dot"></div><span>Arte y diseño</span><span></span></button>
             <button>
-                <div></div><span>Tecnología</span><span></span></button>
+                <div class="icon-dot"></div><span>Tecnología</span><span></span></button>
             <button>
-                <div></div><span>Educación</span><span></span></button>
+                <div class="icon-dot"></div><span>Educación</span><span></span></button>
             <button>
-                <div></div><span>Fotografía</span><span></span></button>
+                <div class="icon-dot"></div><span>Fotografía</span><span></span></button>
 
-        </div>
-
-        <div id="menu-contacts-list">
-            <button type="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img src="./public/media/girl-b.jpg" />
-                <ul>
-                    <li>
-                        Alejandra Magos Mendoza
-                    </li>
-                    <li>
-                        Diseñadora
-                    </li>
-                </ul>
-            </button>
         </div>
 
         <button id="btn-contacts" type="button">
             Contactos
         </button>
 
+        <div id="menu-contacts-list">
+            <button type="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="./public/media/man-a.jpg" />
+                <ul>
+                    <li>
+                        Adrian Ortiz Martinez
+                    </li>
+                    <li>
+                        Desarrollador
+                    </li>
+                </ul>
+            </button>
+        </div>
+
     </div>
 
     <div id="container-mail-list">
-        <button>Hola</button>
+        <div id="container-search">
+            <img src="./public/media/icon-search.png" />
+            <input type="text" placeholder="Buscar..." />
+
+            <select class="selectpicker">
+                <option value="all">Ordenar por fecha</option>
+                <option value="all">Ordenar por no leídos</option>
+                <option value="all">Ordenar por leídos</option>
+                <option value="all">Ordenar por importancia</option>
+            </select>
+
+        </div>
+
+        <div id="item-mail-list">
+
+            <ul id="inbox-list" class="nav nav-tabs tabs-left">
+
+                <li class="active">
+                    <a href="#inbox-1" data-toggle="tab">
+                        <ul>
+                            <li>
+                                <div class="icon-dot blue-border"></div>Amanda Ruiz<span>02/05/16</span>
+                            </li>
+                            <li>
+                                <p>Da el siguiente paso con el curso Design Patterns, A Pragma</p>
+                            </li>
+                        </ul>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
     </div>
 
     <div id="container-preview">
-        <h2>Preview</h2>
+
+        <div class="inbox-preview tab-content">
+            <div class="tab-pane active" id="inbox-1">Soy el correo inbox 1.</div>
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="new-mail-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Redactar correo</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div class="row">
+
+                        <div class="col-sm-12">
+
+                            <form class="form-horizontal">
+
+                                <div class="form-group form-group-sm">
+                                    <label for="email" class="col-sm-2 control-label">Destinatario:</label>
+                                    <div class="col-sm-10">
+                                        <input type="email" class="form-control" id="email" placeholder="Email">
+                                    </div>
+                                </div>
+
+                                <div class="form-group form-group-sm">
+                                    <label for="myEmail" class="col-sm-2 control-label">De:</label>
+                                    <div class="col-sm-10">
+                                        <input type="email" class="form-control" id="myEmail" placeholder="Karen Olvera <karenolvera@gmail.com>" value="Karen Olvera <karenolvera@gmail.com>">
+                                    </div>
+                                </div>
+
+                                <div class="form-group form-group-sm">
+                                    <label for="asunto" class="col-sm-2 control-label">Asunto:</label>
+                                    <div class="col-sm-10">
+                                        <input type="email" class="form-control" id="asunto" placeholder="Asunto">
+                                    </div>
+                                </div>
+
+                                <div class="form-group form-group-sm">
+                                    <div class="col-sm-12">
+                                        <textarea name="name" id="content" class="form-control" rows="8" cols="40"></textarea>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Enviar</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script>
         window.$ = window.jQuery = require('./public/js/jquery.2.1.3.min.js');
         require('./public/js/bootstrap.min.js');
+        require('./public/js/bootstrap-select.js');
         require('./public/js/app.js');
     </script>
 </body>

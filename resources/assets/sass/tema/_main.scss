@@ -1,13 +1,17 @@
 div#container-user {
+    position: relative;
+    z-index: 10;
+    top: 0;
+
     button {
         box-shadow: $purple-shadow;
         padding: 0;
         margin: 0;
-        width: 180px;
+        width: 179px;
         height: 56px;
 
         background-color: $white;
-        border: solid 0;
+        border: solid 0 transparent;
         border-bottom: solid 1px $blue-border;
         @include transition(.3s ease);
 
@@ -76,7 +80,7 @@ span.blue-line {
 button#btn-new-mail {
     padding: 0;
     margin: 0;
-    width: 180px;
+    width: 179px;
     height: 36px;
     background-color: $white;
     border: solid 0;
@@ -140,18 +144,18 @@ div#menu-mail-list {
                 color: $blue-300;
             }
         }
-
-        div {
-            margin-top: 4px;
-            margin-right: 8px;
-            width: 10px;
-            height: 10px;
-            background-color: $gray-100;
-            border: solid 2px $gray-300;
-            border-radius: 10px;
-            float: left;
-        }
     }
+}
+
+div.icon-dot {
+    margin-top: 4px;
+    margin-right: 8px;
+    width: 10px;
+    height: 10px;
+    background-color: $gray-100;
+    border: solid 2px $gray-300;
+    border-radius: 10px;
+    float: left;
 }
 
 //

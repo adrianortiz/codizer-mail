@@ -1,18 +1,23 @@
 $white: #FFFFFF;
-$gray-100: #FBFBFB;
-$gray-150: #EBF0F3;
+$gray-100: #F3F4F6; // #FBFBFB;
+$gray-150: #E9EAEC; // #EBF0F3;
 $gray-300: #7C7C7C;
 $purple-100: #B97FD2;
 $blue-300: #2973C1;
+$black-100: #4A4A4A;
+$yellow-150: #E5A84A;
 
-$purple-shadow: 0px 6px 18px 0px rgba(201,201,201,0.56);
+$purple-shadow: 4px -2px 18px 0px rgba(201,201,201,0.56);
 $blue-shadow: 0px 6px 18px 0px rgba(175,179,183,0.37);
 
 $purple-border: rgba(167,97,194,0.32);
 $blue-border: rgba(11,15,18,0.12);
 
-// MIXINS
 
+$gray-shadow: -6px 2px 11px 0px #E4E9ED;
+
+
+// MIXINS
 @mixin prefixer($property, $value, $prefixes: webkit moz ms o) {
     #{$property}: #{$value};
     @each $prefix in $prefixes {

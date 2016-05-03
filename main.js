@@ -16,7 +16,8 @@ function createWindow () {
       height: 600,
       minWidth: 800,
       minHeight: 440,
-      center: true
+      center: true,
+      // titleBarStyle: 'hidden',
   })
 
   // and load the index.html of the app.

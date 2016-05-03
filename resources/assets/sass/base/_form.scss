@@ -1,0 +1,33 @@
+input[type=text], input[type=password], input[type=email], input[type=number], select, textarea {
+  @include prefixer(background, transparent);
+  @include prefixer(box-shadow, inset 0 0 0 rgba(0,0,0,.075) !important);
+  @include prefixer(border-radius, 0px !important);
+  @include prefixer(border-left, solid 3px);
+  border-color: #CCCCCC;
+
+  &:focus {
+      border-color: $blue-300;
+  }
+}
+
+button {
+    border-radius: 0 !important;
+}
+
+.dropdown-menu {
+    background-color: rgba(#F6F6F6, 0.95);
+
+    li {
+        a {
+            &:hover, &:focus {
+                background-color: $blue-300;
+                color: $white;
+            }
+        }
+    }
+}
+
+// dropdown bootstrap + bootstrap-select
+.dropdown-menu, .text {
+    font-size: 13px !important;
+}

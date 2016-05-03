@@ -19,6 +19,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    overflow: hidden;
 }
 
 /*
@@ -35,6 +36,7 @@ div#container-main, div#container-mail-list, div#container-preview {
 */
 div#container-main {
     width: 180px;
+    border-right: solid 1px $gray-150;
 }
 
 /*
@@ -42,7 +44,6 @@ div#container-main {
 */
 div#container-mail-list {
     width: 260px;
-    background-color: orange;
 }
 
 /*

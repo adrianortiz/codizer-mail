@@ -1,0 +1,128 @@
+div#container-search {
+    width: 100%;
+    height: 56px;
+    background-color: $white;
+    border: solid 1px $gray-150;
+    border-top: none;
+    border-left: none;
+
+    text-align: center;
+    padding-top: 6px;
+
+    img {
+        width: 13px;
+        height: 13px;
+    }
+
+    input {
+        width: 210px;
+        margin-left: 7px;
+        border: none;
+        font-size: 14px;
+
+        &::-webkit-input-placeholder {
+           color: $black-100;
+        }
+    }
+
+    div.bootstrap-select {
+        width: 100%;
+
+        button.btn-order-by {
+            padding: 0 !important;
+            background-color: $white;
+            font-size: 10px;
+            border-radius: 0;
+            height: 26px;
+            box-shadow: none !important;
+
+            span {
+                text-align: center;
+
+
+            }
+        }
+    }
+
+}
+
+div#item-mail-list {
+    width: 100%;
+    height: calc(100% - 56px);
+    overflow-y: auto;
+}
+
+//
+.nav-tabs {
+    border-bottom: 0;
+}
+
+.nav-tabs > li {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+}
+
+.nav-tabs > li > a {
+    border: 1px solid none;
+    border-radius: 0;
+    margin-right: 0;
+    height: 100px;
+    color: $black-100;
+    border-bottom: solid 1px $gray-150;
+}
+
+li.active a {
+    border: none !important;
+
+}
+
+li.active {
+    box-shadow: $gray-shadow;
+    border-left: solid 2px $purple-100 !important;
+}
+
+
+
+div#item-mail-list {
+    ul {
+        li {
+            border: none;
+            border-left: solid 2px transparent;
+            @include transition(.3s ease);
+            a {
+                border: none;
+                border-bottom: solid 1px $gray-150;
+                @include transition(.3s ease);
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    li {
+                        margin: 0;
+                        padding: 0;
+                        list-style: none;
+                        font-weight: bolder;
+                        font-size: 12px;
+
+                        div {
+                            border: solid 2px $blue-300;
+                            background-color: transparent;
+                        }
+
+                        span {
+                            float: right;
+                            font-weight: normal;
+                            font-size: 10px;
+                        }
+
+                        p {
+                            font-weight: normal;
+                            font-size: 11px;
+                            margin-top: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
